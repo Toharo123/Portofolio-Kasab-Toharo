@@ -149,7 +149,7 @@ export default function App() {
       </div>
     </div>
 
-   {/* SISI KANAN: Foto Profil Formal */}
+  {/* SISI KANAN: Foto Profil Formal */}
     <div className="flex-1 flex justify-center md:justify-end w-full">
       <img 
         src={fotoFormal} 
@@ -157,14 +157,9 @@ export default function App() {
         className="w-64 h-80 md:w-72 md:h-96 object-cover rounded-2xl border-4 border-blue-500/30 shadow-2xl transition-transform duration-300 hover:scale-105"
       />
     </div>
-    </div>
 
   </div>
 </div>
-              </div>
-            </div>
-          </div>
-        </div>
         
         {/* Wave transition bottom */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 text-gray-50">
