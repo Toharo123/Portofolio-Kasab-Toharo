@@ -14,7 +14,7 @@ import {
   Wrench,
   ChevronRight
 } from 'lucide-react';
-import fotoFormal from './foto-formal.jpg';
+import fotoFormal from './foto-formal.jpg.jpeg';
 // Komponen Card untuk Timeline (Pendidikan, Pengalaman, Organisasi)
 const TimelineCard = ({ year, title, subtitle, location, points, icon: Icon }) => (
   <div className="relative pl-8 sm:pl-32 py-6 group">
