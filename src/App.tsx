@@ -14,7 +14,7 @@ import {
   Wrench,
   ChevronRight
 } from 'lucide-react';
-
+import fotoFormal from './foto-formal.jpg';
 // Komponen Card untuk Timeline (Pendidikan, Pengalaman, Organisasi)
 const TimelineCard = ({ year, title, subtitle, location, points, icon: Icon }) => (
   <div className="relative pl-8 sm:pl-32 py-6 group">
@@ -119,28 +119,48 @@ export default function App() {
       {/* Hero Section */}
       <section id="beranda" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-800/50 border border-blue-400/30 text-blue-100 text-sm font-semibold mb-6 backdrop-blur-sm">
-              S.Pi - Teknologi & Manajemen Perikanan Tangkap
-            </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-              KASAB TOHARO
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed font-light">
-              Lulusan Sarjana Perikanan Institut Pertanian Bogor dengan keahlian dalam <span className="font-semibold text-white">pengembangan teknologi alat tangkap</span> dan <span className="font-semibold text-white">budidaya ikan</span>. 
-              Berpengalaman dalam riset lapangan, publikasi ilmiah, serta manajemen operasional dan pemeliharaan aset.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 text-sm text-blue-50">
-              <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
-                <Mail size={16} className="text-blue-300"/> kasabtoharo07@gmail.com
-              </div>
-              <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
-                <Phone size={16} className="text-blue-300"/> +62 896 1418 6474
-              </div>
-              <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
-                <MapPin size={16} className="text-blue-300"/> Serang, Indonesia
+       <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+  {/* Flexbox untuk membagi teks di kiri dan foto di kanan */}
+  <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
+    
+    {/* SISI KIRI: Teks & Kontak (Lebar disesuaikan agar tidak sempit) */}
+    <div className="flex-1 text-left max-w-2xl">
+      <div className="inline-block px-4 py-1.5 rounded-full bg-blue-800/50 border border-blue-400/30 text-blue-100 text-sm font-semibold mb-4">
+        S.Pi - Teknologi & Manajemen Perikanan Tangkap
+      </div>
+      <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+        KASAB TOHARO
+      </h1>
+      <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed font-light">
+        Lulusan Sarjana Perikanan Institut Pertanian Bogor dengan keahlian dalam <span className="font-semibold text-white">pengembangan teknologi alat tangkap</span> dan <span className="font-semibold text-white">budidaya ikan</span>. Berpengalaman dalam riset lapangan, publikasi ilmiah, serta manajemen operasional dan pemeliharaan aset.
+      </p>
+      
+      {/* Tombol Kontak */}
+     <div className="flex flex-wrap gap-4 text-sm text-blue-50">
+        <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
+          <Mail size={16} className="text-blue-300"/> kasabtoharo07@gmail.com
+        </div>
+        <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
+          <Phone size={16} className="text-blue-300"/> +62 896 1418 6474
+        </div>
+        <div className="flex items-center gap-2 bg-blue-950/40 px-4 py-2 rounded-lg backdrop-blur-sm">
+          <MapPin size={16} className="text-blue-300"/> Serang, Indonesia
+        </div>
+      </div>
+    </div>
+
+   {/* SISI KANAN: Foto Profil Formal */}
+    <div className="flex-1 flex justify-center md:justify-end w-full">
+      <img 
+        src={fotoFormal} 
+        alt="Foto Formal Kasab Toharo" 
+        className="w-64 h-80 md:w-72 md:h-96 object-cover rounded-2xl border-4 border-blue-500/30 shadow-2xl transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+    </div>
+
+  </div>
+</div>
               </div>
             </div>
           </div>
